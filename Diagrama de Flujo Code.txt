@@ -1,0 +1,45 @@
+flowchart TB
+    A(["Inicio"]) --> B{"¿Usuario registrado?"}
+    B -- No --> C["Pantalla 1<br>Login / Registro"]
+    C --> D["Ingresar usuario y contraseña"]
+    D --> E["Guardar credenciales<br>en localStorage"]
+    E --> F["Pantalla 2<br>Inicio - Mis Mascotas"]
+    B -- Sí --> F
+    F --> G{"¿Qué desea hacer?"}
+    G -- Añadir mascota --> H["Formulario<br>Nueva Mascota"]
+    H --> I["Guardar mascota<br>en almacenamiento local"]
+    I --> F
+    G -- Seleccionar mascota --> J["Pantalla 3<br>Perfil de Mascota"]
+    J --> K{"¿Qué desea hacer?"}
+    K -- Volver --> F
+    K -- Ver Agenda / Historial --> L["Pantalla 4<br>Historial / Calendario"]
+    L --> M{"¿Qué desea hacer?"}
+    M -- Volver --> J
+    M -- Nuevo Recordatorio --> N["Pantalla 5<br>Nuevo Recordatorio"]
+    N --> O{"¿Guardar o cancelar?"}
+    O -- Cancelar --> L
+    O -- Guardar --> P["Seleccionar tipo de evento<br>Medicina / Comida / Vacuna / Baño"]
+    P --> Q["Ingresar nombre,<br>fecha y hora"]
+    Q --> R["Guardar evento<br>en almacenamiento local"]
+    R --> S["Programar alerta local"]
+    S --> L
+
+    style A fill:#757575,color:#ffffff
+    style B fill:#757575,color:#ffffff
+    style C fill:#757575,color:#ffffff
+    style D fill:#757575,color:#ffffff
+    style E fill:#757575,color:#ffffff
+    style F fill:#757575,color:#ffffff
+    style G fill:#757575,color:#ffffff
+    style H fill:#757575,color:#ffffff
+    style I fill:#757575,color:#ffffff
+    style J fill:#757575,color:#ffffff
+    style K fill:#757575,color:#ffffff
+    style L fill:#757575,color:#ffffff
+    style M fill:#757575,color:#ffffff
+    style N fill:#757575,color:#ffffff
+    style O fill:#757575,color:#ffffff
+    style P fill:#757575,color:#ffffff
+    style Q fill:#757575,color:#ffffff
+    style R fill:#757575,color:#ffffff
+    style S fill:#757575,color:#ffffff
