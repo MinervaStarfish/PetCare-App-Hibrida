@@ -1,0 +1,35 @@
+flowchart LR
+
+    P1["PANTALLA 1<br/>LOGIN / REGISTRO"]
+
+    P2["PANTALLA 2<br/>INICIO<br/>Mis Mascotas"]
+
+    P3["PANTALLA 3<br/>PERFIL<br/>DE LA MASCOTA"]
+
+    P4["PANTALLA 4<br/>HISTORIAL / CALENDARIO"]
+
+    P5["PANTALLA 5<br/>NUEVO RECORDATORIO"]
+
+
+    P1 -->|"Ingresar / Registrarse"| P2
+
+    P2 -->|"Seleccionar mascota"| P3
+    P2 -->|"Añadir mascota"| P2
+
+    P3 -->|"Ver Agenda / Historial"| P4
+    P3 -->|"Volver"| P2
+
+    P4 -->|"Añadir Recordatorio +"| P5
+    P4 -->|"Volver"| P3
+
+    P5 -->|"Guardar Recordatorio"| P4
+    P5 -->|"Cancelar"| P4
+
+    P2 -->|"Cerrar sesión"| P1
+
+    style P1 fill:#757575,color:#ffffff
+    style P2 fill:#757575,color:#ffffff
+    style P3 fill:#757575,color:#ffffff
+    style P4 fill:#757575,color:#ffffff
+    style P5 fill:#757575,color:#ffffff
+  
